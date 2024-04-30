@@ -20,6 +20,7 @@ const addTask = () => {
 listContainer.addEventListener('click', function (e) {
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('checked')
+        saveData(); //guarda los cambios en el local storage
     } else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove();
         saveData(); //guarda los cambios en el local storage
